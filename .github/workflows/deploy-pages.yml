@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npx ng build --base-href "/${{ github.event.repository.name }}/"
+        run: npx ng build --configuration production --base-href "/"
 
       - name: Add SPA fallback
         run: cp dist/gabo-martin-site/browser/index.html dist/gabo-martin-site/browser/404.html
