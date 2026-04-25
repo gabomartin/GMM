@@ -1,0 +1,14 @@
+@if (safeUrl()) {
+  <div class="w-full max-w-[600px] overflow-hidden rounded-[1.25rem] border border-white/10 bg-black">
+    <iframe
+      [src]="safeUrl()"
+      [title]="item().title"
+      width="100%"
+      [height]="embedHeight()"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy"
+      class="block w-full"
+    ></iframe>
+  </div>
+}

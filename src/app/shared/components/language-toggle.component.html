@@ -1,0 +1,22 @@
+<div class="inline-flex rounded-full border border-white/10 bg-white/5 p-1 text-xs font-semibold tracking-[0.12em] text-[var(--color-text-muted)]">
+  <button
+    type="button"
+    [class]="language() === 'en'
+      ? 'cursor-pointer rounded-full bg-[var(--color-accent)] px-3 py-2 text-white transition hover:!text-white'
+      : 'cursor-pointer rounded-full px-3 py-2 text-[var(--color-text-muted)] transition hover:text-white'"
+    [attr.aria-pressed]="language() === 'en'"
+    (click)="languageService.setLanguage('en')"
+  >
+    EN
+  </button>
+  <button
+    type="button"
+    [class]="language() === 'es'
+      ? 'cursor-pointer rounded-full bg-[var(--color-accent)] px-3 py-2 text-white transition hover:!text-white'
+      : 'cursor-pointer rounded-full px-3 py-2 text-[var(--color-text-muted)] transition hover:text-white'"
+    [attr.aria-pressed]="language() === 'es'"
+    (click)="languageService.setLanguage('es')"
+  >
+    ES
+  </button>
+</div>

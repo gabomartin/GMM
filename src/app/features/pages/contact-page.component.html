@@ -1,0 +1,31 @@
+<div class="space-y-6">
+  <app-hero
+    [eyebrow]="page().hero.eyebrow"
+    [title]="page().hero.title"
+    [summary]="page().hero.summary"
+    [ctas]="page().hero.ctas"
+  />
+
+  <section class="mt-4 grid gap-8 xl:grid-cols-[0.9fr_1.1fr]">
+    <div class="reveal-delay border-t border-white/10 py-6">
+      <p class="text-sm leading-7 text-[var(--color-text-muted)]">{{ contactInfo().intro }}</p>
+      <p class="mt-4 text-xs uppercase tracking-[0.28em] text-[var(--color-accent)]">{{ contactInfo().responseTime }}</p>
+
+      <div class="mt-6 grid gap-4">
+        @for (detail of contactInfo().details; track detail.label) {
+          <a
+            [href]="detail.href || '#'"
+            [target]="detail.href?.startsWith('http') ? '_blank' : null"
+            rel="noreferrer"
+            class="border-t border-white/10 py-4 transition hover:border-white/30"
+          >
+            <p class="text-xs uppercase tracking-[0.28em] text-[var(--color-accent-soft)]">{{ detail.label }}</p>
+            <p class="mt-2 text-base text-white">{{ detail.value }}</p>
+          </a>
+        }
+      </div>
+    </div>
+
+    <app-contact-form [language]="language()" [preset]="preset()" />
+  </section>
+</div>

@@ -1,0 +1,14 @@
+<section class="reveal border-y border-white/10 px-6 py-12 text-center sm:px-10">
+  <p class="text-xs uppercase tracking-[0.34em] text-[var(--color-accent)]">404</p>
+  <h1 class="mt-4 font-display text-4xl text-white">
+    {{ language() === 'en' ? 'Page not found' : 'Página no encontrada' }}
+  </h1>
+  <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[var(--color-text-muted)] sm:text-base">
+    {{ language() === 'en'
+      ? 'Return home to continue with music, sets, mastering, or contact.'
+      : 'Volvé al inicio para seguir con música, sesiones, mastering o contacto.' }}
+  </p>
+  <a routerLink="/" class="mt-8 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-[var(--color-accent)] hover:text-white">
+    {{ language() === 'en' ? 'Back home' : 'Volver al inicio' }}
+  </a>
+</section>

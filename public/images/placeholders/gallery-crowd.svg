@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Crowd placeholder</title>
+  <desc id="desc">Abstract crowd silhouettes and stage lighting.</desc>
+  <rect width="1400" height="900" fill="#08080c"/>
+  <rect width="1400" height="900" fill="#67a1ff" opacity=".08"/>
+  <circle cx="700" cy="210" r="300" fill="#f57634" opacity=".2"/>
+  <path d="M0 590c142-57 288-62 438-15 174 55 321 54 494 8 155-41 311-42 468-3v320H0Z" fill="#050507"/>
+  <g fill="#11131a">
+    <circle cx="280" cy="585" r="38"/><circle cx="420" cy="560" r="42"/><circle cx="560" cy="595" r="36"/>
+    <circle cx="720" cy="558" r="44"/><circle cx="875" cy="590" r="40"/><circle cx="1030" cy="562" r="43"/>
+  </g>
+</svg>

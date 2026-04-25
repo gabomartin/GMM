@@ -1,0 +1,10 @@
+<div class="space-y-6">
+  <app-hero
+    [eyebrow]="page().hero.eyebrow"
+    [title]="page().hero.title"
+    [summary]="page().hero.summary"
+    [ctas]="page().hero.ctas"
+  />
+
+  <app-gallery-grid [items]="galleryItems()" [language]="language()" />
+</div>

@@ -1,0 +1,24 @@
+<div class="space-y-6">
+  <app-hero
+    [eyebrow]="page().hero.eyebrow"
+    [title]="page().hero.title"
+    [summary]="page().hero.summary"
+    [ctas]="page().hero.ctas"
+  />
+
+  <div class="mt-4">
+    <app-section-block [section]="page().sections[0]" />
+  </div>
+
+  @if (mastering(); as masteringOffer) {
+    <section class="grid gap-6 xl:grid-cols-2">
+      <app-service-card [service]="masteringOffer" href="#mastering-inquiry" />
+    </section>
+
+    <app-mastering-inquiry-form
+      [language]="language()"
+      [preset]="preset()"
+      [price]="masteringOffer.price"
+    />
+  }
+</div>

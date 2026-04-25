@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Studio detail gallery placeholder</title>
+  <desc id="desc">Abstract studio desk and monitor shapes.</desc>
+  <rect width="1200" height="900" fill="#090a0f"/>
+  <rect x="175" y="200" width="850" height="360" rx="28" fill="#141821"/>
+  <rect x="230" y="250" width="340" height="210" rx="16" fill="#050507"/>
+  <rect x="630" y="250" width="340" height="210" rx="16" fill="#050507"/>
+  <rect x="0" y="610" width="1200" height="290" fill="#050507"/>
+  <circle cx="310" cy="700" r="80" fill="#67a1ff" opacity=".28"/>
+  <circle cx="890" cy="700" r="80" fill="#f57634" opacity=".34"/>
+  <path d="M210 575h780" stroke="#fff" stroke-width="4" opacity=".12"/>
+</svg>

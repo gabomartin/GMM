@@ -1,0 +1,14 @@
+<div class="space-y-6">
+  <app-hero
+    [eyebrow]="page().hero.eyebrow"
+    [title]="page().hero.title"
+    [summary]="page().hero.summary"
+    [ctas]="page().hero.ctas"
+  />
+
+  <div class="mt-4">
+    @for (section of page().sections; track section.id) {
+      <app-section-block [section]="section" />
+    }
+  </div>
+</div>

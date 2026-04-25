@@ -1,0 +1,18 @@
+<article class="reveal-delay border-y border-white/10 py-6">
+  <p class="text-xs uppercase tracking-[0.3em] text-[var(--color-accent)]">{{ service().audience }}</p>
+  <h3 class="mt-4 font-display text-2xl text-white">{{ service().title }}</h3>
+  <p class="mt-4 text-sm leading-7 text-[var(--color-text-muted)]">{{ service().summary }}</p>
+
+  <ul class="mt-5 space-y-3 text-sm text-[var(--color-text-muted)]">
+    @for (feature of service().features; track feature) {
+      <li class="border-t border-white/10 py-3">{{ feature }}</li>
+    }
+  </ul>
+
+  <a
+    [href]="href()"
+    class="mt-6 inline-flex border-b border-white/30 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+  >
+    {{ service().ctaLabel }}
+  </a>
+</article>

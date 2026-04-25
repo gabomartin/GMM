@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Live recap gallery placeholder</title>
+  <desc id="desc">Abstract video poster with play mark.</desc>
+  <rect width="1200" height="900" fill="#07070a"/>
+  <rect x="155" y="120" width="890" height="660" rx="34" fill="#10131a"/>
+  <circle cx="600" cy="450" r="132" fill="#fff" opacity=".9"/>
+  <path d="M565 374v152l132-76Z" fill="#07070a"/>
+  <circle cx="260" cy="220" r="240" fill="#67a1ff" opacity=".14"/>
+  <circle cx="900" cy="650" r="275" fill="#f57634" opacity=".18"/>
+</svg>

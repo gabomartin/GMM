@@ -1,0 +1,37 @@
+<section id="mastering-inquiry" class="reveal-delay border-t border-white/10 py-6">
+  <div class="mb-6 space-y-3">
+    <p class="text-xs uppercase tracking-[0.28em] text-[var(--color-accent)]">{{ labels().priceLabel }}: {{ price() }}</p>
+    <h2 class="font-display text-2xl text-white">{{ labels().title }}</h2>
+    <p class="text-sm leading-7 text-[var(--color-text-muted)]">{{ labels().subtitle }}</p>
+  </div>
+
+  <form class="grid gap-4" [formGroup]="form" (ngSubmit)="submit()">
+    <label class="grid gap-2 text-sm text-[var(--color-text-muted)]">
+      <span>{{ labels().name }} *</span>
+      <input formControlName="name" class="border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-white/30" />
+    </label>
+
+    <label class="grid gap-2 text-sm text-[var(--color-text-muted)]">
+      <span>{{ labels().audioLinks }} *</span>
+      <textarea formControlName="audioLinks" rows="5" class="border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-white/30"></textarea>
+    </label>
+
+    <label class="grid gap-2 text-sm text-[var(--color-text-muted)]">
+      <span>{{ labels().trackDetails }} *</span>
+      <textarea formControlName="trackDetails" rows="6" class="border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-white/30"></textarea>
+    </label>
+
+    @if (submitted() && form.invalid) {
+      <p class="text-sm text-[var(--color-accent)]">{{ labels().invalid }}</p>
+    }
+
+    <div class="flex flex-wrap items-center gap-3 pt-2">
+      <button type="submit" class="border-b border-white/30 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]">
+        {{ labels().action }}
+      </button>
+      <a [href]="mailtoHref()" class="border-b border-white/20 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-text-muted)] transition hover:border-white/40 hover:text-white">
+        {{ labels().preview }}
+      </a>
+    </div>
+  </form>
+</section>

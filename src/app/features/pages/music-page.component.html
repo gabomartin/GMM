@@ -1,0 +1,40 @@
+<div class="space-y-6">
+  <app-hero
+    [eyebrow]="page().hero.eyebrow"
+    [title]="page().hero.title"
+    [summary]="page().hero.summary"
+    [ctas]="page().hero.ctas"
+  />
+
+  <div class="mt-4">
+    @if (featuredEmbed(); as embed) {
+      <app-media-embed [embed]="embed" />
+    }
+  </div>
+
+  <section class="reveal-delay border-t border-white/10 py-6">
+    <div class="mb-6 flex flex-wrap gap-3" role="tablist" aria-label="Music catalog">
+      @for (tab of catalogTabs(); track tab.id) {
+        <button
+          type="button"
+          role="tab"
+          class="cursor-pointer border-b py-2 text-sm font-semibold uppercase tracking-[0.18em] transition duration-200 hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+          [class.border-[var(--color-accent)]]="activeCatalogTab() === tab.id"
+          [class.text-[var(--color-accent)]]="activeCatalogTab() === tab.id"
+          [class.border-white/25]="activeCatalogTab() !== tab.id"
+          [class.text-[var(--color-text-muted)]]="activeCatalogTab() !== tab.id"
+          [attr.aria-selected]="activeCatalogTab() === tab.id"
+          (click)="setCatalogTab(tab.id)"
+        >
+          {{ tab.label }}
+        </button>
+      }
+    </div>
+
+    @if (activeCatalog(); as catalog) {
+      <div class="music-tab-panel" role="tabpanel" [attr.aria-label]="catalog.label">
+        <app-music-catalog-group [items]="catalog.items" />
+      </div>
+    }
+  </section>
+</div>

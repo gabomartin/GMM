@@ -1,0 +1,40 @@
+<footer id="site-footer" class="border-t border-white/10 bg-black/30">
+  <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+    <div class="space-y-4">
+      <img
+        src="/brand/logos/gabo-martin-logotype-white.svg"
+        alt="Gabo Martin"
+        class="h-5 w-auto"
+      />
+      <p class="max-w-xs text-sm leading-6 text-[var(--color-text-muted)]">
+        {{ language() === 'en' ? 'DJ & PRODUCER' : 'DJ & PRODUCTOR' }}
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+        {{ language() === 'en' ? 'Navigation' : 'Navegación' }}
+      </p>
+      <div class="mt-4 flex flex-col gap-3 text-sm">
+        @for (item of navigationItems(); track item.path) {
+          <a [routerLink]="item.path" class="tracking-[0.06em] text-[var(--color-text-muted)] transition hover:text-[var(--color-accent)]">
+            {{ item.label }}
+          </a>
+        }
+      </div>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+        {{ language() === 'en' ? 'Elsewhere' : 'Perfiles' }}
+      </p>
+      <div class="mt-4 flex flex-col gap-3 text-sm">
+        @for (link of socialLinks(); track link.id) {
+          <a [href]="link.url" target="_blank" rel="noreferrer" class="text-[var(--color-text-muted)] transition hover:text-[var(--color-accent)]">
+            {{ link.label }}<span class="text-white/50"> / {{ link.handle || link.url }}</span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

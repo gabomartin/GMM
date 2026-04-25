@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile background placeholder</title>
+  <desc id="desc">Abstract dark stage light placeholder for mobile screens.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10141c"/>
+      <stop offset=".55" stop-color="#07070a"/>
+      <stop offset="1" stop-color="#160f0c"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="66%" cy="18%" r="58%">
+      <stop offset="0" stop-color="#f57634" stop-opacity=".42"/>
+      <stop offset=".52" stop-color="#f57634" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#f57634" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cool" cx="14%" cy="66%" r="54%">
+      <stop offset="0" stop-color="#67a1ff" stop-opacity=".3"/>
+      <stop offset=".46" stop-color="#67a1ff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#67a1ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1600" fill="url(#bg)"/>
+  <rect width="900" height="1600" fill="url(#warm)"/>
+  <rect width="900" height="1600" fill="url(#cool)"/>
+  <path d="M0 1095c150-48 294-66 431-54 163 14 311 68 469 41v518H0Z" fill="#040405" opacity=".74"/>
+  <path d="M0 1266c151-35 300-33 448 4 154 39 304 31 452-25v355H0Z" fill="#020203" opacity=".84"/>
+  <g opacity=".16" stroke="#fff" stroke-width="2">
+    <path d="M84 0 620 1600"/>
+    <path d="M762 0 280 1600"/>
+  </g>
+</svg>

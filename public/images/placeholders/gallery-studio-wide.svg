@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Studio wide placeholder</title>
+  <desc id="desc">Abstract wide studio setup.</desc>
+  <rect width="1400" height="900" fill="#090a0f"/>
+  <rect x="190" y="170" width="1020" height="430" rx="30" fill="#121722"/>
+  <rect x="255" y="235" width="380" height="250" rx="18" fill="#030304"/>
+  <rect x="765" y="235" width="380" height="250" rx="18" fill="#030304"/>
+  <rect x="0" y="650" width="1400" height="250" fill="#050507"/>
+  <circle cx="450" cy="725" r="75" fill="#67a1ff" opacity=".24"/>
+  <circle cx="950" cy="725" r="75" fill="#f57634" opacity=".28"/>
+</svg>

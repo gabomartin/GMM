@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">DJ booth placeholder</title>
+  <desc id="desc">Abstract DJ booth with warm stage lights.</desc>
+  <rect width="1400" height="900" fill="#07070a"/>
+  <circle cx="1030" cy="220" r="310" fill="#f57634" opacity=".28"/>
+  <circle cx="300" cy="520" r="260" fill="#67a1ff" opacity=".18"/>
+  <rect x="250" y="565" width="900" height="115" rx="18" fill="#11131a"/>
+  <circle cx="500" cy="622" r="62" fill="#050507"/>
+  <circle cx="900" cy="622" r="62" fill="#050507"/>
+  <path d="M0 740c228-47 455-53 682-18 240 38 480 31 718-21v199H0Z" fill="#020203"/>
+</svg>

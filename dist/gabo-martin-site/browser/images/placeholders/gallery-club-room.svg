@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Club room gallery placeholder</title>
+  <desc id="desc">Abstract stage lights over a club room.</desc>
+  <rect width="1200" height="900" fill="#07070a"/>
+  <path d="M0 620c176-84 353-115 529-93 221 27 407 112 671 58v315H0Z" fill="#020203"/>
+  <circle cx="850" cy="230" r="310" fill="#f57634" opacity=".26"/>
+  <circle cx="260" cy="515" r="280" fill="#67a1ff" opacity=".18"/>
+  <path d="M170 0 620 900M1030 0 620 900" stroke="#fff" stroke-width="5" opacity=".13"/>
+</svg>

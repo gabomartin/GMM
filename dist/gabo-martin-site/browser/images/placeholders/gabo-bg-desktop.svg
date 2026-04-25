@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Desktop background placeholder</title>
+  <desc id="desc">Abstract dark stage light placeholder for desktop screens.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#12151d"/>
+      <stop offset="0.48" stop-color="#07070a"/>
+      <stop offset="1" stop-color="#18100d"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="70%" cy="32%" r="55%">
+      <stop offset="0" stop-color="#f57634" stop-opacity=".46"/>
+      <stop offset=".42" stop-color="#f57634" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#f57634" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cool" cx="18%" cy="72%" r="48%">
+      <stop offset="0" stop-color="#67a1ff" stop-opacity=".34"/>
+      <stop offset=".5" stop-color="#67a1ff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#67a1ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#warm)"/>
+  <rect width="1920" height="1080" fill="url(#cool)"/>
+  <path d="M0 770c270-86 548-123 832-111 352 15 682 104 1088 22v399H0Z" fill="#050507" opacity=".68"/>
+  <path d="M0 876c340-64 617-70 877-18 309 62 618 62 1043-23v245H0Z" fill="#030304" opacity=".8"/>
+  <g opacity=".18" stroke="#fff" stroke-width="2">
+    <path d="M255 0 870 1080"/>
+    <path d="M1180 0 730 1080"/>
+    <path d="M1540 0 1060 1080"/>
+  </g>
+</svg>

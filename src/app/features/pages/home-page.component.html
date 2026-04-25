@@ -1,0 +1,41 @@
+@if (showIntro()) {
+  <app-home-intro (introDone)="completeIntro()" />
+}
+
+<section class="min-h-[calc(100vh-4.75rem)] py-5 sm:py-6">
+  <div class="reveal flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+    <div class="space-y-4">
+      <img
+        src="/brand/logos/gabo-martin-logotype-white.svg"
+        alt="Gabo Martin"
+        class="h-8 w-auto sm:h-10 lg:h-12"
+      />
+      <p class="font-accent mt-3 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)] sm:text-sm">
+        DJ &amp; Producer
+      </p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4">
+      @for (action of homeActions(); track action.path) {
+        <a
+          [routerLink]="action.path"
+          class="border-b border-white/30 py-2 text-xs font-semibold tracking-[0.08em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+        >
+          {{ action.label }}
+        </a>
+      }
+    </div>
+  </div>
+
+  @if (featuredLiveSet(); as embed) {
+    <app-media-embed [embed]="embed" [spotlight]="true" />
+  }
+
+  <a
+    href="#site-footer"
+    class="mt-4 hidden items-center justify-end gap-3 text-xs font-semibold tracking-[0.12em] text-[var(--color-text-muted)] transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:flex"
+  >
+    <span>{{ language() === 'en' ? 'Scroll' : 'Bajar' }}</span>
+    <span class="home-scroll-cue" aria-hidden="true"></span>
+  </a>
+</section>

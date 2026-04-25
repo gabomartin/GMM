@@ -1,0 +1,36 @@
+<section class="reveal-delay border-t border-white/10 py-6">
+  <div class="space-y-4">
+    @if (section().eyebrow) {
+      <p class="text-xs uppercase tracking-[0.32em] text-[var(--color-accent)]">{{ section().eyebrow }}</p>
+    }
+
+    <h2 class="font-display text-3xl font-semibold leading-[0.96] text-white sm:text-4xl">{{ section().title }}</h2>
+
+    @if (section().description) {
+      <p class="max-w-3xl text-sm leading-7 text-[var(--color-text-muted)] sm:text-base">
+        {{ section().description }}
+      </p>
+    }
+
+    @if (section().bullets?.length) {
+      <ul class="grid gap-3 text-sm text-[var(--color-text-muted)] sm:grid-cols-2">
+        @for (bullet of section().bullets; track bullet) {
+          <li class="border-t border-white/10 py-4">{{ bullet }}</li>
+        }
+      </ul>
+    }
+
+    @if (section().ctas?.length) {
+      <div class="flex flex-wrap gap-3 pt-2">
+        @for (cta of section().ctas; track cta.href) {
+          <a
+            [routerLink]="cta.href"
+            class="inline-flex border-b border-white/30 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          >
+            {{ cta.label }}
+          </a>
+        }
+      </div>
+    }
+  </div>
+</section>

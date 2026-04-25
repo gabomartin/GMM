@@ -1,0 +1,42 @@
+<section class="py-1">
+  <div class="divide-y divide-white/10 border-y border-white/10">
+    @for (item of items(); track item.id) {
+      <article>
+        <button
+          type="button"
+          class="group grid w-full cursor-pointer gap-3 px-0 py-5 text-left transition duration-200 hover:bg-white/[0.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:px-3"
+          [attr.aria-expanded]="expandedItemId() === item.id"
+          (click)="toggleItem(item.id)"
+        >
+          <span class="min-w-0">
+            <span class="block text-base font-semibold text-white transition group-hover:text-[var(--color-accent)]">
+              {{ item.title }}
+            </span>
+            @if (item.releaseDate) {
+              <span class="mt-1 block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+                {{ item.releaseDate }}
+              </span>
+            }
+          </span>
+
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-text-muted)] transition group-hover:text-white">
+            {{ expandedItemId() === item.id ? 'Hide' : 'Listen' }}
+            <span
+              aria-hidden="true"
+              class="inline-block transition duration-300"
+              [class.rotate-45]="expandedItemId() === item.id"
+            >
+              +
+            </span>
+          </span>
+        </button>
+
+        @if (expandedItemId() === item.id) {
+          <div class="music-embed-expand pb-6">
+            <app-music-release-embed [item]="item" />
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>

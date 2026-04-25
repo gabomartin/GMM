@@ -1,0 +1,48 @@
+:host {
+  display: contents;
+}
+
+.home-intro {
+  animation: home-intro-shell 1650ms ease forwards;
+}
+
+.home-intro__content {
+  animation: home-intro-title 1350ms cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes home-intro-shell {
+  0%,
+  68% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes home-intro-title {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  24%,
+  72% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-intro,
+  .home-intro__content {
+    animation: none;
+  }
+}
