@@ -35,6 +35,17 @@ jobs:
       - name: Build site
         run: npx ng build --configuration production --base-href "/"
 
+      - name: Run unit tests
+        run: npx ng test --watch=false --browsers=ChromeHeadless
+
+      - name: Run e2e smoke test
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          start: npm run start:ci
+          wait-on: http://127.0.0.1:4200
+          wait-on-timeout: 120
+
       - name: Add SPA fallback
         run: cp dist/gabo-martin-site/browser/index.html dist/gabo-martin-site/browser/404.html
 
@@ -45,7 +56,7 @@ jobs:
 
   deploy:
     environment:
-      name: github-pages
+      name: gabo-martin-music
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
