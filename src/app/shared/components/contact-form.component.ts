@@ -42,7 +42,6 @@ export class ContactFormComponent {
           message: 'Message',
           action: this.preset().ctaLabel,
           invalid: 'Please complete the required fields before continuing.',
-          preview: 'Open email draft',
         }
       : {
           title: 'Enviar consulta',
@@ -55,7 +54,6 @@ export class ContactFormComponent {
           message: 'Mensaje',
           action: this.preset().ctaLabel,
           invalid: 'Completá los campos obligatorios antes de continuar.',
-          preview: 'Abrir borrador',
         },
   );
 

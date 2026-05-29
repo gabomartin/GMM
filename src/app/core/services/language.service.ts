@@ -15,7 +15,11 @@ export class LanguageService {
     this.language.set(language);
 
     if (this.browser) {
-      localStorage.setItem(this.storageKey, language);
+      try {
+        localStorage.setItem(this.storageKey, language);
+      } catch {
+        // Browsers can block storage in private or restricted contexts.
+      }
     }
   }
 
@@ -28,7 +32,36 @@ export class LanguageService {
       return DEFAULT_LANGUAGE;
     }
 
-    const storedLanguage = localStorage.getItem(this.storageKey);
-    return storedLanguage === 'es' || storedLanguage === 'en' ? storedLanguage : DEFAULT_LANGUAGE;
+    return this.readStoredLanguage() ?? this.inferBrowserLanguage();
+  }
+
+  private readStoredLanguage(): Language | null {
+    try {
+      const storedLanguage = localStorage.getItem(this.storageKey);
+      return this.toSupportedLanguage(storedLanguage);
+    } catch {
+      return null;
+    }
+  }
+
+  private inferBrowserLanguage(): Language {
+    const preferredLocales = [
+      ...(globalThis.navigator?.languages ?? []),
+      globalThis.navigator?.language,
+    ];
+
+    for (const locale of preferredLocales) {
+      const language = this.toSupportedLanguage(locale);
+      if (language) {
+        return language;
+      }
+    }
+
+    return DEFAULT_LANGUAGE;
+  }
+
+  private toSupportedLanguage(locale: string | null | undefined): Language | null {
+    const language = locale?.toLowerCase().split(/[-_]/)[0];
+    return language === 'es' || language === 'en' ? language : null;
   }
 }
