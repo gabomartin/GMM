@@ -72,7 +72,7 @@ export interface ResolvedServiceOffer {
   summary: string;
   audience: string;
   features: readonly string[];
-  ctaLabel: string;
+  ctaLabel?: string;
 }
 
 export interface ResolvedContactDetail {

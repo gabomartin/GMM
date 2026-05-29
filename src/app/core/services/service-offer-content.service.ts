@@ -13,7 +13,7 @@ export class ServiceOfferContentService {
       summary: this.resolve(service.summary, language),
       audience: this.resolve(service.audience, language),
       features: service.features.map((feature) => this.resolve(feature, language)),
-      ctaLabel: this.resolve(service.ctaLabel, language),
+      ctaLabel: service.ctaLabel ? this.resolve(service.ctaLabel, language) : undefined,
     }));
   }
 

@@ -11,7 +11,7 @@ describe('InquiryMailtoService', () => {
         to: 'mastering@gabomartin.com',
         subject: 'Mastering request',
         body: 'Hi Gabo,',
-        ctaLabel: 'Open mastering email',
+        ctaLabel: 'Send',
       },
       {
         service: 'Service',

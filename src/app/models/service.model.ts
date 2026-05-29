@@ -7,5 +7,5 @@ export interface ServiceOffer {
   summary: LocalizedValue<string>;
   audience: LocalizedValue<string>;
   features: readonly LocalizedValue<string>[];
-  ctaLabel: LocalizedValue<string>;
+  ctaLabel?: LocalizedValue<string>;
 }

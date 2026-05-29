@@ -24,7 +24,6 @@ export const servicesData: readonly ServiceOffer[] = [
         'Referencia y notas'
       ),
     ],
-    ctaLabel: localized('Start mastering request', 'Iniciar solicitud de mastering'),
   },
 ] as const;
 

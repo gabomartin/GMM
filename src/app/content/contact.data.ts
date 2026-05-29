@@ -51,7 +51,7 @@ export const contactInfoData: ContactInfo = {
         'Hi Gabo,\n\nI am sending a mastering request.\n',
         'Hola Gabo,\n\nTe envio una solicitud de mastering.\n'
       ),
-      ctaLabel: localized('Open mastering email', 'Abrir correo de mastering'),
+      ctaLabel: localized('Send', 'Enviar'),
     },
   ],
 } as const;

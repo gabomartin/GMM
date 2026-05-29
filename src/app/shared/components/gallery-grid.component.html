@@ -6,7 +6,7 @@
           [src]="galleryItem.src"
           [alt]="alt(galleryItem)"
           (animationend)="index === activeIndex() ? onAnimationEnd() : null"
-          class="absolute inset-0 h-full w-full object-cover"
+          class="absolute inset-0 h-full w-full object-contain"
           [class.gallery-enter-next]="slideClass(index) === 'gallery-enter-next'"
           [class.gallery-enter-prev]="slideClass(index) === 'gallery-enter-prev'"
           [class.gallery-exit-next]="slideClass(index) === 'gallery-exit-next'"

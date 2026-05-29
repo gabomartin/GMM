@@ -34,7 +34,6 @@ export class MasteringInquiryFormComponent {
           trackDetails: 'Track details',
           action: this.preset().ctaLabel,
           invalid: 'Please complete all required fields before continuing.',
-          preview: 'Open email draft',
           service: 'Service',
         }
       : {
@@ -46,7 +45,6 @@ export class MasteringInquiryFormComponent {
           trackDetails: 'Detalles del track',
           action: this.preset().ctaLabel,
           invalid: 'Completá todos los campos obligatorios antes de continuar.',
-          preview: 'Abrir borrador',
           service: 'Servicio',
         },
   );

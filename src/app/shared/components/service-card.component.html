@@ -9,10 +9,14 @@
     }
   </ul>
 
-  <a
-    [href]="href()"
-    class="mt-6 inline-flex border-b border-white/30 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-  >
-    {{ service().ctaLabel }}
-  </a>
+  @if (href(); as serviceHref) {
+    @if (service().ctaLabel; as ctaLabel) {
+      <a
+        [href]="serviceHref"
+        class="mt-6 inline-flex border-b border-white/30 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+      >
+        {{ ctaLabel }}
+      </a>
+    }
+  }
 </article>

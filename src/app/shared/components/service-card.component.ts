@@ -7,5 +7,5 @@ import { ResolvedServiceOffer } from '../../core/services/content.types';
 })
 export class ServiceCardComponent {
   readonly service = input.required<ResolvedServiceOffer>();
-  readonly href = input.required<string>();
+  readonly href = input<string>();
 }
